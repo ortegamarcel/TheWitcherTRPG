@@ -13,8 +13,7 @@
                 <a class="item-armor-display"><i class="fas fa-info"></i></a>
             </td>
             <td>
-                <img src="{{valuable.img}}" class="item-img dragable" draggable="true"
-                        data-id="{{valuable._id}}"/>
+                {{> "systems/TheWitcherTRPG/templates/partials/item-image.html" item=valuable}}
             </td>
             <td>
                 <input class="inline-edit item-quantity" data-field="system.quantity" type="text"

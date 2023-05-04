@@ -15,8 +15,9 @@
                     <a class="item-armor-display"><i class="fas fa-info"></i></a>
                 </div>
             </td>
-            <td><img src="{{diagram.img}}" class="item-img dragable" draggable="true"
-                      data-id="{{diagram._id}}"/></td>
+            <td>
+                {{> "systems/TheWitcherTRPG/templates/partials/item-image.html" item=diagram}}
+            </td>
             <td><input class="inline-edit item-quantity" data-field="system.quantity" type="text"
                         value="{{diagram.system.quantity}}" data-dtype="Number"/></td>
             <td><input class="inline-edit" data-field="name" type="text" value="{{diagram.name}}"
