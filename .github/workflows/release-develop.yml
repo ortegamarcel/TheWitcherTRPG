@@ -20,8 +20,6 @@ jobs:
           id: TheWitcherTRPG-Develop
           title: TheWitcherTRPG - fvtt (Development)
           description: The Witcher TRPG System Development Version
-          authors:
-            name: Marcel O.
           version: ${{github.event.release.tag_name}}
           url: https://github.com/${{github.repository}}
           manifest: https://github.com/${{github.repository}}/releases/latest/download/system.json
