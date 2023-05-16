@@ -1931,7 +1931,7 @@ export default class WitcherActorSheet extends ActorSheet {
   }
 
   async _onItemShow(event) {
-    event.preventDefault;
+    event.preventDefault();
     let itemId = event.currentTarget.closest(".item").dataset.itemId;
     let item = this.actor.items.get(itemId);
 
@@ -1941,6 +1941,7 @@ export default class WitcherActorSheet extends ActorSheet {
       buttons: {}
     }, {
       width: 520,
+      height: 'fit-content',
       resizable: true
     }).render(true);
   }
