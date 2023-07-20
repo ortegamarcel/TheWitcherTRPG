@@ -1,2 +1,4 @@
 build
 /.idea/
+generate-release-notes.js
+packs/*/
