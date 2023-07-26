@@ -142,6 +142,11 @@
     padding: 0.25em 0.25em;
 }
 
+.item-table td.center {
+    display: flex;
+    justify-content: center;
+}
+
 .spell-template-damage {
     width: 15em;
     margin-top: 0.6em;

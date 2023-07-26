@@ -189,6 +189,10 @@ input.item-quantity {
   flex: 1;
 }
 
+.weapon-section > .flex {
+  margin-bottom: 8px;
+}
+
 .weapon-section .flex label {
   margin-right: 5px;
   margin-bottom: 5px;
@@ -438,6 +442,7 @@ input.skill-value {
 }
 
 .item-img {
+  display: flex;
   border: none;
   width: 40px;
   height: 40px;

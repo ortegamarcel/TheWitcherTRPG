@@ -10,8 +10,34 @@
     border-width: 0px;
 }
 
-.item-section{
-    flex: 1
+.item-section {
+    flex: 1;
+    padding-left: 5px;
+}
+
+.item-section h3 {
+    margin: 0;
+    border: none;
+}
+
+.item-section table {
+    margin-top: 0;
+}
+
+.item-section .currencies {
+    display: flex;
+    height: 75px;
+}
+
+.item-section .currencies .currency {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table tr.loot-sheet-table-header {
+    display: grid;
+    grid-template-columns: 49fr 78fr 61fr 211fr 211fr 211fr 109fr; /* These are the columns width on a specific dialog width, but with 'fr' instead of 'px' to make it relative/responsive. */
 }
 
 table tr.hidden-view {
@@ -19,7 +45,7 @@ table tr.hidden-view {
 }
 
 .hidden-from-view {
-    display: none
+    display: none;
 }
 
 .table-empty-space {
