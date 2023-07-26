@@ -16,7 +16,7 @@ table th {
 }
 
 .no-margin {
-    margin: 0px;;
+    margin: 0px;
 }
 
 .currency {
@@ -45,7 +45,7 @@ table th {
     position: relative;
     display: flex;
     cursor: pointer;
-    height: 44px;
+    height: 40px;
 }
 
 .item-img-wrapper .item-show {

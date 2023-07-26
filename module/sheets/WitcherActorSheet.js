@@ -73,13 +73,14 @@ export default class WitcherActorSheet extends ActorSheet {
     });
 
     // Crafting section
-    data.allComponents = actor.getList("component");
+    data.allComponents = actor.getList("component"); // used in Loot Sheet
     data.craftingMaterials = data.allComponents.filter(i => i.system.type == "crafting-material" || i.system.type == "component");
     data.ingotsAndMinerals = data.allComponents.filter(i => i.system.type == "minerals");
     data.hidesAndAnimalParts = data.allComponents.filter(i => i.system.type == "animal-parts");
     data.enhancements = items.filter(i => i.type == "enhancement" && i.system.type != "armor" && !i.system.applied);
 
     // Valuables Section
+    data.valuables = items.filter(i => i.type == "valuable"); // used in Loot Sheet
     data.clothingAndContainers = items.filter(i => i.type == "valuable" && (i.system.type == "clothing" || i.system.type == "containers"));
     data.general = items.filter(i => i.type == "valuable" && (i.system.type == "genera" || !i.system.type));
     data.foodAndDrinks = items.filter(i => i.type == "valuable" && i.system.type == "food-drink");
@@ -102,6 +103,7 @@ export default class WitcherActorSheet extends ActorSheet {
     data.oilDiagrams = actor.getList("diagrams").filter(d => d.system.type == "oil").map(sanitizeDescription);
     
     // Diagrams
+    data.diagrams = actor.getList("diagrams"); // used in Loot Sheet
     data.ingredientDiagrams = actor.getList("diagrams").filter(d => d.system.type == "ingredients").map(sanitizeDescription);
     data.weaponDiagrams = actor.getList("diagrams").filter(d => d.system.type == "weapon").map(sanitizeDescription);
     data.armorDiagrams = actor.getList("diagrams").filter(d => d.system.type == "armor").map(sanitizeDescription);
