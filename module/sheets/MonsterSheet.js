@@ -161,7 +161,7 @@ async function exportLoot(actor, extended) {
             if (typeof (newQuantity) === 'string' && item.system.quantity.includes("d")) {
                 let total = 0
                 for (let i = 0; i < multiplier; i++) {
-                    let roll = await new Roll(item.system.quantity).evaluate({ async: true })
+                    let roll = await new Roll(item.system.quantity).evaluate()
                     total += Math.ceil(roll.total)
                 }
                 newQuantity = total

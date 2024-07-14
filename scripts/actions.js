@@ -85,7 +85,7 @@ async function ApplyDamage(actor, dmgType, location, totalDamage) {
   }
 
   if (silverDmg) {
-    let silverRoll = await new Roll(silverDmg).evaluate({ async: true })
+    let silverRoll = await new Roll(silverDmg).evaluate()
     totalDamage = Number(totalDamage) + silverRoll.total
     infoTotalDmg += `+${silverRoll.total}[${game.i18n.localize("WITCHER.Damage.silver")}]`
   }
@@ -201,7 +201,7 @@ async function ApplyDamage(actor, dmgType, location, totalDamage) {
       speaker: actor.getSpeaker(),
       flags: actor.getNoDamageFlags(),
     }
-    let rollResult = await new Roll("1").evaluate({ async: true })
+    let rollResult = await new Roll("1").evaluate()
     rollResult.toMessage(messageData)
     return
   }
@@ -367,7 +367,7 @@ async function ApplyDamage(actor, dmgType, location, totalDamage) {
     speaker: actor.getSpeaker(),
     flags: actor.getDamageFlags(),
   }
-  let rollResult = await new Roll("1").evaluate({ async: true })
+  let rollResult = await new Roll("1").evaluate()
   rollResult.toMessage(messageData)
 
   actor?.update({

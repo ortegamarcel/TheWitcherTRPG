@@ -9,7 +9,7 @@ import { ExecuteDefence } from "../../scripts/actions.js";
 export default class WitcherActorSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["witcher", "sheet", "actor"],
       width: 1120,
       height: 600,
@@ -399,7 +399,7 @@ export default class WitcherActorSheet extends ActorSheet {
           speaker: this.actor.getSpeaker(),
           flavor: `<h1>Quantity of ${dragData.item.name}</h1>`,
         }
-        let roll = await new Roll(dragData.item.system.quantity).evaluate({ async: true })
+        let roll = await new Roll(dragData.item.system.quantity).evaluate()
         roll.toMessage(messageData)
         this._addItem(this.actor, dragData.item, Math.floor(roll.total))
         if (previousActor) {
@@ -1437,7 +1437,7 @@ export default class WitcherActorSheet extends ActorSheet {
   }
 
   async _onCritRoll(event) {
-    let rollResult = await new Roll("1d10x10").evaluate({ async: true })
+    let rollResult = await new Roll("1d10x10").evaluate()
     let messageData = {
       speaker: this.actor.getSpeaker()
     }
