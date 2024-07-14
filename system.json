@@ -6,12 +6,12 @@
     "minimum" : "11",
     "verified" : "12.328"
   },
-    "version": 0.96,
-    "authors": {
-      "name": "TechAntho"
-    },
-    "scripts": [
-    ],
+  "version": 0.97,
+  "authors": {
+    "name": "TechAntho"
+  },
+  "scripts": [
+  ],
   "esmodules": [
     "scripts/TheWitcherTRPG.js"
   ],
